@@ -1,0 +1,9 @@
+#!/bin/sh
+
+curr_path=$(dirname $(realpath $0))
+
+export MIGRATE_CONNECTION="sqlite://$curr_path/db.sqlite"
+export MIGRATE_PATH="$curr_path"
+
+exec "$curr_path/vendor/byjg/migration-cli/scripts/migrate" "$@"
+

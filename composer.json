@@ -1,0 +1,5 @@
+{
+    "require": {
+        "byjg/migration-cli": "^4.2"
+    }
+}
